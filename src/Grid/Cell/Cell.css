@@ -1,0 +1,185 @@
+.cell {
+  background-color: #ffffff;
+  border: 1px solid gainsboro;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.cell:hover {
+  background-color: #7fed64;
+  cursor: pointer;
+}
+
+.start {
+  background-image: url("../../Assets/space-capsule.svg");
+  background-color: palegreen;
+}
+
+.start:hover {
+  background-color: rgb(121, 224, 121);
+  cursor: grab;
+}
+
+.changeStart:hover {
+  background-image: url("../../Assets/space-capsule.svg");
+  background-color: rgb(121, 224, 121);
+  cursor: grabbing;
+}
+
+.target {
+  background-image: url("../../Assets/moon.svg");
+  background-color: salmon;
+}
+
+.target:hover {
+  background-color: rgb(216, 98, 85);
+  cursor: grab;
+}
+
+.changeTarget:hover {
+  background-image: url("../../Assets/moon.svg");
+  background-color: rgb(216, 98, 85);
+  cursor: grabbing;
+}
+
+.wall {
+  background-color: #2c3e50;
+  border: none;
+  animation-name: wallAnimation;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.wall:hover {
+  background-color: #34495e;
+}
+
+.changeInvalid:hover {
+  cursor: not-allowed;
+}
+
+.faded {
+  opacity: 0.5;
+}
+
+.visited {
+  background-color: #00c9ff;
+  animation-name: visitedAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.visited:hover {
+  background-color: #04b5e6;
+  cursor: not-allowed;
+}
+
+.visitedInstant {
+  background-color: #00c9ff;
+}
+
+.visitedInstant:hover {
+  background-color: #04b5e6;
+}
+
+.inPath {
+  background-color: #c471ed;
+  animation-name: pathAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.inPath:hover {
+  background-color: #b469da;
+  cursor: not-allowed;
+}
+
+.inPathInstant {
+  background-color: #c471ed;
+}
+
+.inPathInstant:hover {
+  background-color: #b469da;
+}
+
+@keyframes wallAnimation {
+  0% {
+    background-color: #ffffff;
+    transform: scale(0);
+    border-radius: 100%;
+  }
+  50% {
+    background-color: #2c3e50;
+    border-color: #ffffff;
+  }
+  75% {
+    background-color: #2c3e50;
+    /* transform: scale(1.2); */
+    border-color: #ffffff;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #2c3e50;
+  }
+}
+
+@keyframes visitedAnimation {
+  0% {
+    background-color: #ffffff;
+    transform: scale(0);
+    border-radius: 100%;
+  }
+  50% {
+    background-color: #fc97f7;
+    border-color: #ffffff;
+  }
+  75% {
+    background-color: #c471ed;
+    transform: scale(1.2);
+    border-color: #ffffff;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #00c9ff;
+  }
+}
+
+@keyframes pathAnimation {
+  0% {
+    background-color: #00c9ff;
+    /* transform: scale(0.3); */
+    border-radius: 100%;
+  }
+  50% {
+    /* background-color: #38ef7d; */
+    transform: scale(0.3);
+  }
+  75% {
+    background-color: #c471ed;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    background-color: #fc97f7;
+  }
+}

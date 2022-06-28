@@ -1,0 +1,11 @@
+.gridContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.grid {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
