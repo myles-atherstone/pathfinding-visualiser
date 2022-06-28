@@ -8,6 +8,8 @@ Also has the option to build the following mazes using the following algorithms:
 2. Recursive Backtracking
 3. Prims
 
+**Demo:** https://pathfinding-visualiser.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
